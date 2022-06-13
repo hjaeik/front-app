@@ -1,5 +1,5 @@
 {
-  "name": "frontApp",
+  "name": "front-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -16,11 +16,18 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/runtime": "^7.18.3",
-    "@react-native-community/eslint-config": "^3.0.2",
     "babel-jest": "^28.1.1",
-    "eslint": "^8.17.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "jest": "^28.1.1",
     "metro-react-native-babel-preset": "^0.71.1",
+    "prettier": "2.6.2",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
