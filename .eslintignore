@@ -1,0 +1,4 @@
+node_modules/
+__tests__/App-test.js
+index.js
+App.js
