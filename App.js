@@ -9,9 +9,18 @@
 import React from 'react';
 import type { Node } from 'react';
 import Route from './src/routes';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistStorage } from './src/redux';
 
 const App: () => Node = () => {
-  return <Route />;
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistStorage}>
+        <Route />
+      </PersistGate>
+    </Provider>
+  );
 };
 
 export default App;
