@@ -13,7 +13,21 @@ const Route = () => {
     <Stack.Navigator screenOptions={TAB_NAV_OPTION}>
       <Stack.Screen name="Map" component={Map} />
       <Stack.Screen name="PlaceSearch" component={PlaceSearch} />
-      <Stack.Screen name="MapStepCalendar" component={MapStepCalendar} />
+      <Stack.Screen
+        name="MapStepCalendar"
+        component={MapStepCalendar}
+        options={{
+          title: '정보 입력(날짜 입력)',
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: '#1F96F4', // 가운데 정렬
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };

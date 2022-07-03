@@ -22,6 +22,7 @@
     ],
     "rules": {
         // allow .js files to contain JSX code
+        "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 }

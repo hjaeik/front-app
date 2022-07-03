@@ -1,4 +1,4 @@
-export const montName = {
+export const koLocale = {
   monthNames: [
     '1월',
     '2월',
@@ -31,3 +31,31 @@ export const montName = {
   dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
   today: '오늘',
 };
+
+export const hourData = [
+  '00',
+  '01',
+  '02',
+  '03',
+  '04',
+  '05',
+  '06',
+  '07',
+  '08',
+  '09',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+  '16',
+  '17',
+  '18',
+  '19',
+  '21',
+  '22',
+  '23',
+];
+
+export const minuteData = ['00', '10', '20', '30', '40', '50'];
