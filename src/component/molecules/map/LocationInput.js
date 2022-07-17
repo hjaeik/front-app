@@ -9,10 +9,7 @@ import { SET_DST_POINT, SET_SRC_POINT } from '../../../redux/map/map';
 const LocationInput = () => {
   const navigation = useNavigation();
 
-  const [srcAddress, dstAddress] = useSelector((state) => [
-    state.map.srcAddress,
-    state.map.dstAddress,
-  ]);
+  const { srcAddress, dstAddress } = useSelector((state) => state.map);
 
   return (
     <View style={styles.fromTo_View}>

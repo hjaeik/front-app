@@ -1,10 +1,12 @@
 import { createAction, handleActions } from 'redux-actions';
+import { fromJS } from 'immutable';
 
 export const SET_SRC_POINT = 'frontApp/map/SET_SRC_POINT';
 export const SET_DST_POINT = 'frontApp/map/SET_DST_POINT';
 export const SET_DIRECTION = 'frontApp/map/SET_DERICTION';
 
 const initState = {
+  order: {},
   code: '',
   srcAddress: '',
   srcAddressDetail: '',

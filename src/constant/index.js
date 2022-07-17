@@ -1,0 +1,18 @@
+export const defaultMap = {
+  code: '',
+  srcAddress: '',
+  srcAddressDetail: '',
+  srcCoordinate: {},
+  dstAddress: '',
+  dstAddressDetail: '',
+  dstCoordinate: {},
+  amount: '',
+  reqDate: [],
+  reqTime: '',
+  routeTime: '',
+  routeDistance: '',
+  orderCode: '',
+  route: [],
+  baggages: [],
+  reqMsg: '',
+};

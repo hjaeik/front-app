@@ -61,7 +61,7 @@ const MapStepCalendar = () => {
         <Button
           title="다음"
           onPress={() => {
-            navigation.navigate('MapStepCalendar');
+            navigation.navigate('MapStepBaggages');
           }}
         />
       </ScrollView>

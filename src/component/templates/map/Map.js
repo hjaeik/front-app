@@ -20,32 +20,23 @@ const Map = () => {
     longitudeDelta: 0.0121,
   });
 
-  const [srcAddress, srcCoordinate, srcAddressDetail, dstAddress, dstCoordinate, dstAddressDetail] =
-    useSelector((state) => [
-      state.map.srcAddress,
-      state.map.srcCoordinate,
-      state.map.srcAddressDetail,
-      state.map.dstAddress,
-      state.map.dstCoordinate,
-      state.map.dstAddressDetail,
-    ]);
+  const {
+    srcAddress,
+    srcCoordinate,
+    srcAddressDetail,
+    dstAddress,
+    dstCoordinate,
+    dstAddressDetail,
+  } = useSelector((state) => state.map);
 
   useEffect(() => {
-    if (srcCoordinate.latitude !== '' && srcCoordinate.longitude !== '') {
+    if (srcCoordinate.latitude && srcCoordinate.longitude) {
       setSrcMarker(
-        <Marker
-          coordinate={{
-            latitude: srcCoordinate.latitude,
-            longitude: srcCoordinate.longitude,
-          }}
-          title={srcAddress}
-          description={srcAddressDetail}
-        />,
+        <Marker coordinate={srcCoordinate} title={srcAddress} description={srcAddressDetail} />,
       );
       setLocation({
         ...location,
-        latitude: srcCoordinate.latitude,
-        longitude: srcCoordinate.longitude,
+        ...srcCoordinate,
       });
     } else {
       setSrcMarker();
@@ -53,21 +44,13 @@ const Map = () => {
   }, [srcAddress, srcCoordinate, srcAddressDetail]);
 
   useEffect(() => {
-    if (dstCoordinate.latitude !== '' && dstCoordinate.longitude !== '') {
+    if (dstCoordinate.latitude && dstCoordinate.longitude) {
       setDstMarker(
-        <Marker
-          coordinate={{
-            latitude: dstCoordinate.latitude,
-            longitude: dstCoordinate.longitude,
-          }}
-          title={dstAddress}
-          description={dstAddressDetail}
-        />,
+        <Marker coordinate={dstCoordinate} title={dstAddress} description={dstAddressDetail} />,
       );
       setLocation({
         ...location,
-        latitude: dstCoordinate.latitude,
-        longitude: dstCoordinate.longitude,
+        ...dstCoordinate,
       });
     } else {
       setDstMarker();
