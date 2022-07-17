@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Button, StyleSheet, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import PointInput from '../../atoms/map/PointInput';
-import { SET_SRC_POINT, SET_DST_POINT } from '../../../redux/map/map';
+import { SET_DST_POINT, SET_SRC_POINT } from '../../../redux/map/map';
 
 const LocationInput = () => {
   const navigation = useNavigation();
 
-  const [srcAddress, dstAddress] = useSelector((state) => [
-    state.map.srcAddress,
-    state.map.dstAddress,
-  ]);
+  const { srcAddress, dstAddress } = useSelector((state) => state.map);
 
   return (
     <View style={styles.fromTo_View}>
@@ -48,7 +45,7 @@ const LocationInput = () => {
         />
       </View>
       <Button
-        title="next"
+        title="다음"
         onPress={() => {
           navigation.navigate('MapStepCalendar');
         }}
